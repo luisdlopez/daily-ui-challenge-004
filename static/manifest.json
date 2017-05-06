@@ -1,6 +1,6 @@
 {
-  "name": "daily-ui-challenge-004",
-  "short_name": "daily-ui-challenge-004",
+  "name": "Split the Bill",
+  "short_name": "Split the Bill",
   "icons": [
       {
           "src": "/static/img/icons/android-chrome-192x192.png",
@@ -16,5 +16,5 @@
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#000000",
-  "theme_color": "#4DBA87"
+  "theme_color": "#633E57"
 }
