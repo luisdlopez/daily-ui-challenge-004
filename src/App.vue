@@ -158,7 +158,7 @@ main {
     position: relative;
     width: 100%;
     padding: 0;
-    height: 105px;
+    height: 110px;
 
     .options-cell {
       vertical-align: top;

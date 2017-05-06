@@ -4,7 +4,6 @@
     <div class="value">{{ billTotal }}</div>
 
     <div class="hint" v-if="displayHint">
-      Enter Tip
       <i class="fa fa-hand-o-down fa-1" aria-hidden="true"></i>
     </div>
   </div>
@@ -34,6 +33,7 @@ export default {
 
 <style lang="scss">
 .bill-total-wrapper {
+  overflow: hidden;
   position: relative;
   background-color: #FAFAFA;
   text-align: center;

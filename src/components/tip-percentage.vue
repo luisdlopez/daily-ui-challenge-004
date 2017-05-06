@@ -1,10 +1,9 @@
 <template>
   <div v-tap class="tip-percentage-wrapper">
-    <h2 class="title">Tip</h2>
-    <div class="value">{{ tipPercentage }}%</div>
+    <h2 class="title">Tip<i class="fa fa-percent" aria-hidden="true"></i></h2>
+    <div class="value">{{ tipPercentage }}</div>
 
     <div class="hint" v-if="displayHint">
-      Enter Split
       <i class="fa fa-hand-o-right fa-1" aria-hidden="true"></i>
     </div>
   </div>
@@ -34,12 +33,13 @@ export default {
 
 <style lang="scss">
 .tip-percentage-wrapper {
+  overflow: hidden;
   cursor: pointer;
   background-color: #E94546;
   height: 100%;
   font-weight: bold;
   border-right: 2px solid #E85153;
-  padding-left: 20%;
+  padding-left: 15%;
   box-shadow: inset 0px 10px 25px -15px black;
   position: relative;
 
@@ -48,6 +48,12 @@ export default {
     text-transform: uppercase;
     color: #F4A091;
     padding-top: 20px;
+
+    .fa {
+      margin-left: 10px;
+      font-size: 16px;
+      font-weight: normal;
+    }
   }
 
   .value {

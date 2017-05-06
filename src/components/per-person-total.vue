@@ -4,7 +4,6 @@
     <div class="value">{{ perPersonTotal }}</div>
 
     <div class="hint" v-if="displayHint">
-      Enter Total
       <i class="fa fa-hand-o-down fa-1" aria-hidden="true"></i>
     </div>
   </div>
@@ -22,6 +21,7 @@ export default {
 
 <style lang="scss">
 .per-person-total-wrapper {
+  overflow: hidden;
   position: relative;
   background-color: #633E57;
   background: linear-gradient(to top right, rgba(99,62,87,0.5), rgba(99,62,87,1));

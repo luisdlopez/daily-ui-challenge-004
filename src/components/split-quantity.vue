@@ -1,6 +1,6 @@
 <template>
   <div v-tap class="split-quantity-wrapper">
-    <h2 class="title">Split</h2>
+    <h2 class="title">Split<i class="fa fa-users" aria-hidden="true"></i></h2>
     <div class="value">{{ numberOfPeople }}</div>
   </div>
 </template>
@@ -28,12 +28,13 @@ export default {
 
 <style lang="scss">
 .split-quantity-wrapper {
+  overflow: hidden;
   cursor: pointer;
   background-color: #E94546;
   height: 100%;
   font-weight: bold;
   border-right: 2px solid #E85153;
-  padding-left: 20%;
+  padding-left: 15%;
   box-shadow: inset 0px 10px 25px -15px black;
 
   .title {
@@ -41,6 +42,12 @@ export default {
     text-transform: uppercase;
     color: #F4A091;
     padding-top: 20px;
+
+    .fa {
+      margin-left: 10px;
+      font-size: 16px;
+      font-weight: normal;
+    }
   }
 
   .value {
