@@ -4,7 +4,7 @@
     <div class="value">{{ tipPercentage }}</div>
 
     <div class="hint" v-if="displayHint">
-      <i class="fa fa-hand-o-right fa-1" aria-hidden="true"></i>
+      <i class="fa fa-hand-o-left fa-1" aria-hidden="true"></i>
     </div>
   </div>
 </template>
@@ -50,8 +50,8 @@ export default {
     padding-top: 20px;
 
     .fa {
-      margin-left: 10px;
-      font-size: 16px;
+      margin-left: 5px;
+      font-size: 14px;
       font-weight: normal;
     }
   }
@@ -63,8 +63,8 @@ export default {
 
   .hint {
     position: absolute;
-    right: 5px;
-    bottom: 5px;
+    right: 15px;
+    bottom: 70px;
     color: #F4A091;
 
     .fa {

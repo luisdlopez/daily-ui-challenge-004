@@ -1,27 +1,27 @@
 <template>
   <div id="app">
     <main>
-      <per-person-total :per-person-total="perPersonTotal"
-                  :display-hint="selectedInput === ''">
+      <per-person-total :per-person-total="perPersonTotal">
       </per-person-total>
 
       <bill-total :bill-total="billTotal"
                   @selected="selected('billTotal')"
                   :class="{ obscured: !isSelected('billTotal') }"
-                  :display-hint="isSelected('billTotal') && tipPercentage === '0'">
+                  :display-hint="!isSelected('billTotal')">
       </bill-total>
 
       <div class="options-row">
         <div class="options-cell" :class="{ obscured: !isSelected('tipPercentage') }">
           <tip-percentage :tip-percentage="tipPercentage"
                   @selected="selected('tipPercentage')"
-                  :display-hint="isSelected('tipPercentage') && numberOfPeople === '0'">
+                  :display-hint="!isSelected('tipPercentage')">
           </tip-percentage>
         </div><!--
 
         --><div class="options-cell" :class="{ obscured: !isSelected('numberOfPeople') }">
           <split-quantity :number-of-people="numberOfPeople"
-                  @selected="selected('numberOfPeople')">
+                  @selected="selected('numberOfPeople')"
+                  :display-hint="!isSelected('numberOfPeople')">
           </split-quantity>
         </div><!--
 

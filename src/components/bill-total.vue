@@ -1,11 +1,11 @@
 <template>
   <div v-tap class="bill-total-wrapper">
+    <div class="hint" v-if="displayHint">
+      <i class="fa fa-hand-o-left fa-1" aria-hidden="true"></i>
+    </div>
+
     <h2 class="title">Bill Total:</h2>
     <div class="value">{{ billTotal }}</div>
-
-    <div class="hint" v-if="displayHint">
-      <i class="fa fa-hand-o-down fa-1" aria-hidden="true"></i>
-    </div>
   </div>
 </template>
 
@@ -59,9 +59,9 @@ export default {
   }
 
   .hint {
+    right: 15px;
+    bottom: 30px;
     position: absolute;
-    bottom: 5px;
-    left: 5px;
     color: #A4A0C1;
 
     .fa {

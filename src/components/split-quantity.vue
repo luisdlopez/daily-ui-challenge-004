@@ -2,6 +2,10 @@
   <div v-tap class="split-quantity-wrapper">
     <h2 class="title">Split<i class="fa fa-users" aria-hidden="true"></i></h2>
     <div class="value">{{ numberOfPeople }}</div>
+
+    <div class="hint" v-if="displayHint">
+      <i class="fa fa-hand-o-left fa-1" aria-hidden="true"></i>
+    </div>
   </div>
 </template>
 
@@ -11,7 +15,8 @@ const Hammer = require('hammerjs')
 export default {
   name: 'split-quantity',
   props: {
-    numberOfPeople: String
+    numberOfPeople: String,
+    displayHint: Boolean
   },
   directives: {
     tap: {
@@ -44,8 +49,10 @@ export default {
     padding-top: 20px;
 
     .fa {
-      margin-left: 10px;
-      font-size: 16px;
+      position: relative;
+      top: -2px;
+      margin-left: 5px;
+      font-size: 14px;
       font-weight: normal;
     }
   }
@@ -53,6 +60,17 @@ export default {
   .value {
     color: #FFFFFF;
     font-size: 40px;
+  }
+
+  .hint {
+    position: absolute;
+    right: 15px;
+    bottom: 70px;
+    color: #F4A091;
+
+    .fa {
+      margin-left: 5px;
+    }
   }
 }
 </style>

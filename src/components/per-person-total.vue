@@ -2,10 +2,6 @@
   <div class="per-person-total-wrapper">
     <h1 class="title">Per Person</h1>
     <div class="value">{{ perPersonTotal }}</div>
-
-    <div class="hint" v-if="displayHint">
-      <i class="fa fa-hand-o-down fa-1" aria-hidden="true"></i>
-    </div>
   </div>
 </template>
 
@@ -13,8 +9,7 @@
 export default {
   name: 'per-person-total',
   props: {
-    perPersonTotal: String,
-    displayHint: Boolean
+    perPersonTotal: String
   }
 }
 </script>
@@ -39,17 +34,6 @@ export default {
   .value {
     color: #FAFAFA;
     font-size: 100px;
-  }
-
-  .hint {
-    width: 100%;
-    position: absolute;
-    bottom: 5px;
-    color: #AF9EAA;
-
-    .fa {
-      margin-left: 5px;
-    }
   }
 }
 </style>
